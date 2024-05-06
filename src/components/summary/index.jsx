@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import TransactionForm from "../add-transaction";
+import PropTypes from "prop-types";
 
-export default function Summary() {
+export default function Summary({ onClose, isOpen }) {
   return (
     <Box
       p={"6"}
@@ -78,6 +80,12 @@ export default function Summary() {
           <Heading>Chart</Heading>
         </Box>
       </Flex>
+      <TransactionForm onClose={onClose} isOpen={isOpen} />
     </Box>
   );
 }
+
+Summary.propTypes = {
+  onClose: PropTypes.func,
+  isOpen: PropTypes.bool,
+};
