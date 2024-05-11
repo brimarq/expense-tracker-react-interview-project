@@ -99,6 +99,6 @@ export default function Summary({
 Summary.propTypes = {
   onClose: PropTypes.func,
   isOpen: PropTypes.bool,
-  totalExpense: PropTypes.string,
-  totalIncome: PropTypes.string,
+  totalExpense: PropTypes.number,
+  totalIncome: PropTypes.number,
 };
